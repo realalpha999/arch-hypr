@@ -1,0 +1,64 @@
+ARCH LİNUX INSTALLATION GUIDE
+------------------------------
+
+1) Türkçe klavye yükleyin
+
+loadkeys trq
+
+
+2) İnternet Bağlantısını ayarlayın
+
+iwctl
+station wlan0 show
+station wlan0 scan
+station wlan0 connect yournetworkSSID
+quit
+
+
+3) Archinstall Script’ini güncelleyin
+
+pacman -Syy archinstall
+
+
+4) Arch Linux gpg anahtarlarını güncelleyin
+
+pacman-key --init
+pacman-key --populate archlinux
+
+
+5) Archinstall Script’ini çalıştırın
+
+archinstall
+
+
+6) Archinstall ayarlarını yapılandırın
+
+Mirrors kısmından Bulgaria, Germany, Türkiye seç.
+Locales altındaki Keyboard Layout’u trq olarak seç.
+Disk Configuration kısmındaki ayarları yap.
+Root password kısmından şifre belirle.
+User account kısmından yeni kullanıcı ekle ve ona sudo yetkisi ver.
+Profile kısmından Minimal seç.
+Audio kısmından pipewire seç.
+Additional packages kısmına git neovim yaz.
+Network configuration kısmından Use Networkmanager seç.
+Timezone Europe/Istanbul olarak ayarla.
+Optional repositories kısmından multilib seç.
+
+
+8) Sistem açılınca şunları yapın
+
+nmcli device wifi connect yournetworkSSID password yournetworkpassword  --> Wifi bağlan.
+cd /opt/
+sudo git clone https://aur.archlinux.org/yay-git.git  --> yay paketini yükle.
+sudo chown -R yourusername:yourusername yay-git  --> Sahipliğini kullanıcınız için değiştirin.
+cd yay-git/
+makepkg -si
+
+
+8) Güncellemeleri yapın
+
+yay -Suy
+
+
+
