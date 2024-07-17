@@ -1,0 +1,31 @@
+{
+  "timeStamp": 1721215428862,
+  "version": "1.58.0",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "importedLists": [],
+    "popupPanelSections": 31
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-quick-fixes",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "plowe-0",
+    "TUR-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "chrome-extension-scheme",
+    "moz-extension-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* google.com * block\nwww.google.com google.com * noop\ndrive.google.com google.com * noop\nmail.google.com google.com * noop\n* x.com * block\nx.com x.com * noop\n* yandex.com * block\n360.yandex.com yandex.com * noop\npassport.yandex.com yandex.com * noop\n* facebook.com * block\nwww.facebook.com facebook.com * noop\n* * 3p-frame block\n* youtube.com * noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false",
+  "userFilters": ""
+}
